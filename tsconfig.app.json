@@ -1,0 +1,43 @@
+{
+  "extends": "./tsconfig.base.json",
+  "compilerOptions": {
+    "module": "es2020",
+    "target": "es2020",
+    "resolveJsonModule": true,
+    "esModuleInterop": true,    
+    "allowSyntheticDefaultImports": true,
+   "paths": {
+    "exceljs": [
+      "node_modules/exceljs/dist/exceljs.min.js"
+    ],
+    "globalize": [
+      "node_modules/globalize/dist/globalize"
+    ],
+    "globalize/*": [
+      "node_modules/globalize/dist/globalize/*"
+    ],
+    "cldr": [
+      "node_modules/cldrjs/dist/cldr"
+    ],
+    "cldr/*": [
+      "node_modules/cldrjs/dist/cldr/*"
+    ]
+    
+
+   },
+    "outDir": "./out-tsc/app",
+    "types": []
+    
+    
+  },
+  "files": [
+    "src/main.ts",
+    "src/polyfills.ts"
+  ],
+  "include": [
+    "src/**/*.d.ts"
+  ],
+  "angularCompilerOptions": {
+    "enableIvy": true 
+  }
+}

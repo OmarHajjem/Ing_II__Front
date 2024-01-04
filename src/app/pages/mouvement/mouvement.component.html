@@ -1,0 +1,29 @@
+<!-- mouvement.component.html -->
+
+<div>
+    <h2>Liste des Mouvements</h2>
+    <ul>
+      <li *ngFor="let mouvement of mouvements">
+        {{ mouvement.typeMvt }} - {{ mouvement.numCompte }} - {{ mouvement.datemvt | date }}
+        <button (click)="mettreAJourMouvement(mouvement.idMvt, { typeMvt: 'Nouveau type' })">Modifier</button>
+        <button (click)="supprimerMouvement(mouvement.idMvt)">Supprimer</button>
+      </li>
+    </ul>
+  </div>
+  
+  <div>
+    <h2>Ajouter un Nouveau Mouvement</h2>
+    <form>
+      <label>Type de Mouvement: </label>
+      <input [(ngModel)]="nouveauMouvement.typeMvt" name="typeMvt" required>
+  
+      <label>Numéro de Compte: </label>
+      <input [(ngModel)]="nouveauMouvement.numCompte" name="numCompte" required>
+  
+      <label>Date du Mouvement: </label>
+      <input type="date" [(ngModel)]="nouveauMouvement.datemvt" name="datemvt" required>
+  
+      <button (click)="ajouterMouvement()">Ajouter</button>
+    </form>
+  </div>
+  

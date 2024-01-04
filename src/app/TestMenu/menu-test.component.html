@@ -1,0 +1,21 @@
+<app-content-header 
+    [icon]="'format_list_bulleted'" 
+    [title]="'Dynamic menu'" 
+    [desc]="'Create and add menu items dynamically using following approach.'"
+    [hideBreadcrumb]="false"
+    [hasBgImage]="true" 
+    [class]="'pb-4'"></app-content-header>
+
+<div fxLayout="row wrap" fxLayoutAlign="center" class="p-2">
+    <div fxFlex="100" fxFlex.gt-sm="50" fxFlex.sm="60" class="p-2">
+        <mat-card class="block">
+            <mat-card-content>
+                <form id="frm">      
+                     <div fxLayout="row" fxLayoutAlign="center">
+                          <button mat-raised-button color="primary" type="button" (click)="Envoie()">Add New Menu Item</button>
+                    </div>
+                </form>
+            </mat-card-content>
+        </mat-card>
+      </div> 
+</div> 
